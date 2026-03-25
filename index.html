@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pacheco Meza Angel Gustavo</title>
+</head>
+<body>
+    <h1>Fechas con JavaScript</h1>
+  <h2>Fecha actual</h2>
+  <p id="fecha"></p>
+
+  <script>
+    let fecha = new Date();
+
+    let dia = fecha.getDay(); // 0 = domingo, 1 = lunes...
+    let diaMes = fecha.getDate();
+    let mes = fecha.getMonth(); // 0 = enero
+    let año = fecha.getFullYear();
+
+    let nombreDia = "";
+    let nombreMes = "";
+
+    // Día de la semana con switch
+    switch(dia) {
+      case 0: nombreDia = "domingo"; break;
+      case 1: nombreDia = "lunes"; break;
+      case 2: nombreDia = "martes"; break;
+      case 3: nombreDia = "miércoles"; break;
+      case 4: nombreDia = "jueves"; break;
+      case 5: nombreDia = "viernes"; break;
+      case 6: nombreDia = "sábado"; break;
+    }
+
+    // Mes con switch
+    switch(mes) {
+      case 0: nombreMes = "enero"; break;
+      case 1: nombreMes = "febrero"; break;
+      case 2: nombreMes = "marzo"; break;
+      case 3: nombreMes = "abril"; break;
+      case 4: nombreMes = "mayo"; break;
+      case 5: nombreMes = "junio"; break;
+      case 6: nombreMes = "julio"; break;
+      case 7: nombreMes = "agosto"; break;
+      case 8: nombreMes = "septiembre"; break;
+      case 9: nombreMes = "octubre"; break;
+      case 10: nombreMes = "noviembre"; break;
+      case 11: nombreMes = "diciembre"; break;
+    }
+
+    // Mostrar resultado
+    document.getElementById("fecha").innerHTML =
+      "Hoy es " + nombreDia + " " + diaMes + " de " + nombreMes + " del año " + año;
+  </script>
+</body>
+</html>
